@@ -1,0 +1,32 @@
+import Layout from "../../components/layout/Layout";
+import { visitors } from "../../data/mockData";
+
+const SecurityDashboard = () => {
+  return (
+    <Layout>
+      <div className="page-header">
+        <div>
+          <h1>Security Dashboard</h1>
+          <p>Manage today's visitors and entries.</p>
+        </div>
+      </div>
+
+      <div className="cards-grid">
+        {visitors.map((visitor) => (
+          <div className="content-card" key={visitor.id}>
+            <div className="card-content">
+              <h3>{visitor.name}</h3>
+              <p>Flat: {visitor.flatNumber}</p>
+              <p>Purpose: {visitor.purpose}</p>
+              <span className="badge badge-status">
+                {visitor.status}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Layout>
+  );
+};
+
+export default SecurityDashboard;

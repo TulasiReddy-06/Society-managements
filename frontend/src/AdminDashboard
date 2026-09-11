@@ -1,0 +1,46 @@
+import Layout from "../../components/layout/Layout";
+
+const AdminDashboard = () => {
+  return (
+    <Layout>
+      <div className="page-header">
+        <div>
+          <h1>Admin Dashboard</h1>
+          <p>Manage your residential community.</p>
+        </div>
+      </div>
+
+      <div className="stats-grid">
+        <div className="stat-card">
+          <div>
+            <p>Total Residents</p>
+            <h2>248</h2>
+          </div>
+        </div>
+
+        <div className="stat-card">
+          <div>
+            <p>Pending Complaints</p>
+            <h2>12</h2>
+          </div>
+        </div>
+
+        <div className="stat-card">
+          <div>
+            <p>Announcements</p>
+            <h2>18</h2>
+          </div>
+        </div>
+
+        <div className="stat-card">
+          <div>
+            <p>Today's Visitors</p>
+            <h2>27</h2>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default AdminDashboard;
